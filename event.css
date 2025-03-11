@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background: #002147;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.event-list {
+    flex: 3;
+}
+
+.event {
+    display: flex;
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-box {
+    background: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.date-box .date {
+    font-size: 24px;
+}
+
+.date-box .month {
+    font-size: 14px;
+}
+
+.event-details {
+    padding: 15px;
+    flex: 1;
+}
+
+.read-more {
+    background: #002147;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    margin-left: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #002147;
+}
+
+.footer {
+    background: #f4a41c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.apply-btn {
+    background: #002147;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
