@@ -34,22 +34,30 @@ h2 {
     margin-top: 20px;
 }
 
-.lab {
+/* Lab Container for Two-Column Layout */
+.lab-container {
     display: flex;
-    align-items: center;
-    background: white;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
+.lab {
+    width: 45%;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
 .lab img {
-    width: 300px;
+    width: 200px;
     height: auto;
     border-radius: 8px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .lab-info {
@@ -66,4 +74,19 @@ h2 {
 
 .lab-info ul li {
     margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lab {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lab img {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
 }
