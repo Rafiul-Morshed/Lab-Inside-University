@@ -1,2 +1,1 @@
-# WebApp
-Initiating web app project
+# CSE309
