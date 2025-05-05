@@ -1,3 +1,4 @@
+<?php require_once 'redirects.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +15,14 @@
         <h1>Advanced Research Lab</h1>
         <p>Independent University, Bangladesh (IUB)</p>
         <div>
-            <a href="#contact" class="btn pulse">Join Our Team</a>
-            <a href="#research" class="btn btn-outline pulse">Explore Research</a>
+            <a href="?action=join_team" class="btn pulse">Join Our Team</a>
+            <a href="?action=explore_research" class="btn btn-outline pulse">Explore Research</a>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav>
-        <a href="#about">About</a>
+        <a href="?action=about">About</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#team">Team</a>
@@ -49,19 +50,19 @@
                     <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Astro Research Center</h3>
                     <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Space Research" style="width:100%; height:200px; object-fit:cover; border-radius:4px; margin-bottom: 1rem; border: 1px solid var(--primary-green);">
                     <p>Exploring satellite technology and space data analytics for climate monitoring and astronomical discoveries.</p>
-                    <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                    <a href="?action=astro_research" class="btn" style="margin-top: 1rem;">Learn More</a>
                 </div>
                 <div style="background: var(--medium-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-green); transition: all 0.4s;">
                     <h3 style="color: var(--neon-green); margin-bottom: 1rem;">AI & Robotics</h3>
                     <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="AI Robotics" style="width:100%; height:200px; object-fit:cover; border-radius:4px; margin-bottom: 1rem; border: 1px solid var(--primary-green);">
                     <p>Developing autonomous systems for underwater and aerial vehicles with machine learning algorithms.</p>
-                    <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                    <a href="?action=ai_research" class="btn" style="margin-top: 1rem;">Learn More</a>
                 </div>
                 <div style="background: var(--medium-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-green); transition: all 0.4s;">
                     <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Data Science</h3>
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Data Science" style="width:100%; height:200px; object-fit:cover; border-radius:4px; margin-bottom: 1rem; border: 1px solid var(--primary-green);">
                     <p>Advanced analytics and machine learning for fake news detection and sentiment analysis.</p>
-                    <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                    <a href="?action=data_science" class="btn" style="margin-top: 1rem;">Learn More</a>
                 </div>
             </div>
         </section>
@@ -73,14 +74,14 @@
                 <h3>Self-Healing Materials for Spacecraft</h3>
                 <p><em>Funded by NASA (2023-2026)</em></p>
                 <p>Developing materials that autonomously repair micrometeorite damage in orbit using nanotechnology.</p>
-                <a href="#" class="btn btn-outline">Project Details</a>
-                <a href="#" class="btn">Join the Team</a>
+                <a href="?action=self_healing" class="btn btn-outline">Project Details</a>
+                <a href="?action=join_team" class="btn">Join the Team</a>
             </div>
             <div class="news-item">
                 <h3>Quantum Dot Solar Windows</h3>
                 <p><em>Collaboration with Tesla Energy</em></p>
                 <p>Transparent solar panels for skyscrapers achieving 15% efficiency while maintaining 80% transparency.</p>
-                <a href="#" class="btn btn-outline">Project Details</a>
+                <a href="?action=quantum_dot" class="btn btn-outline">Project Details</a>
             </div>
         </section>
 
@@ -92,23 +93,23 @@
                     <img src="Images/Mahadisir.png" alt="Mahady Hasan">
                     <h3>1. Mahady Hasan</h3>
                     <p>Lead Researcher</p>
-                    <a href="#" class="btn btn-outline">Profile</a>
+                    <a href="?action=mahady_profile" class="btn btn-outline">Profile</a>
                 </div>
                 <div class="team-member">
                     <img src="Images/robiulsir.png" alt="Dr. Robiul Islam">
                     <h3>2. Dr. Robiul Islam</h3>
                     <p>Principal Investigator</p>
-                    <a href="#" class="btn btn-outline">Profile</a>
+                    <a href="?action=robiul_profile" class="btn btn-outline">Profile</a>
                 </div>
                 <div class="team-member">
                     <img src="Images/sadiamiss.png" alt="Sadia Binte Alam">
                     <h3>3. Sadia Binte Alam</h3>
                     <p>PhD Candidate</p>
-                    <a href="#" class="btn btn-outline">Profile</a>
+                    <a href="?action=sadia_profile" class="btn btn-outline">Profile</a>
                 </div>
             </div>
             <div style="text-align:center; margin-top:3rem;">
-                <a href="#" class="btn">View Full Team</a>
+                <a href="?action=join_team" class="btn">View Full Team</a>
             </div>
         </section>
 
@@ -119,19 +120,19 @@
                 <li style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed var(--secondary-green);">
                     <strong style="color: var(--neon-green);">Hasan, M.</strong> et al. (2024). "Fake News Detection Using Machine Learning Techniques." <em>Journal of AI Research</em>, 12(3), 45-60.
                     <div style="margin-top: 1rem;">
-                        <a href="#" class="btn btn-outline" style="margin-right: 10px;">PDF</a>
+                        <a href="?action=pub1" class="btn btn-outline" style="margin-right: 10px;">PDF</a>
                         <a href="#" class="btn btn-outline">Cite</a>
                     </div>
                 </li>
                 <li style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed var(--secondary-green);">
                     <strong style="color: var(--neon-green);">Islam, R.</strong> et al. (2023). "Sentiment Analysis with Deep Learning Methods for Performance Assessment and Comparison." <em>IEEE Access</em>, 11, 1234-1245.
                     <div style="margin-top: 1rem;">
-                        <a href="#" class="btn btn-outline" style="margin-right: 10px;">PDF</a>
+                        <a href="?action=pub2" class="btn btn-outline" style="margin-right: 10px;">PDF</a>
                         <a href="#" class="btn btn-outline">Cite</a>
                     </div>
                 </li>
             </ul>
-            <a href="#" class="btn">View All Publications</a>
+            <a href="?action=all_publications" class="btn">View All Publications</a>
         </section>
 
         <!-- News -->
@@ -165,7 +166,7 @@
                 </div>
                 <div>
                     <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Prospective Students</h3>
-                    <a href="#" class="btn">Apply Here</a>
+                    <a href="?action=join_team" class="btn">Apply Here</a>
                 </div>
             </div>
         </section>

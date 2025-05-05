@@ -1,92 +1,455 @@
-body {
-    font-family: Arial, sans-serif;
+/* ===== Futuristic Black & Green Theme ===== */
+:root {
+    --primary-dark: #000000;
+    --primary-green: #00FF00;
+    --neon-green: #39FF14;
+    --secondary-green: #007700;
+    --dark-green: #003300;
+    --light-bg: #111111;
+    --medium-bg: #0A0A0A;
+    --text-light: #FFFFFF;
+    --text-gray: #CCCCCC;
+    --glow: 0 0 10px rgba(57, 255, 20, 0.8);
+  }
+  
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-gray);
+    line-height: 1.7;
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(0, 80, 0, 0.1) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(0, 150, 0, 0.1) 0%, transparent 20%);
+  }
+  
+  /* ===== Header ===== */
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--dark-green));
+    color: var(--text-light);
+    padding: 3rem 0;
     text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--primary-green);
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 255, 0, 0.1), 
+        transparent);
+    animation: scanline 8s linear infinite;
+  }
+  
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--neon-green);
+    text-shadow: var(--glow);
+    position: relative;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+  }
+  
+  /* ===== Navigation ===== */
+  nav {
+    background: var(--medium-bg);
+    padding: 1.2rem;
     text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--primary-green);
+    box-shadow: 0 2px 20px rgba(0, 255, 0, 0.2);
+  }
+  
+  nav a {
+    margin: 0 20px;
     text-decoration: none;
-    font-size: 16px;
-}
-
-h2 {
+    color: var(--primary-green);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.4s;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  nav a:hover {
+    color: var(--primary-dark);
+    background: var(--primary-green);
+    box-shadow: var(--glow);
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--neon-green);
+    transition: width 0.3s;
+  }
+  
+  nav a:hover::after {
+    width: 80%;
+  }
+  
+  /* ===== Main Container ===== */
+  .container {
+    width: 85%;
+    margin: 3rem auto;
+    max-width: 1200px;
+  }
+  
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-block;
+    background: var(--primary-green);
+    color: var(--primary-dark);
+    padding: 12px 28px;
+    margin: 10px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  }
+  
+  .btn:hover {
+    background: var(--neon-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.6);
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  .btn:hover::before {
+    left: 100%;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    box-shadow: none;
+  }
+  
+  .btn-outline:hover {
+    background: var(--primary-green);
+    color: var(--primary-dark);
+  }
+  
+  /* ===== Sections ===== */
+  .research-section {
+    background: var(--light-bg);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-green);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .research-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+  }
+  
+  .research-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 0, 0.05),
+      transparent
+    );
+    pointer-events: none;
+  }
+  
+  .research-section h2 {
+    color: var(--neon-green);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .research-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-green);
+  }
+  
+  /* ===== Team Section ===== */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+  }
+  
+  .team-member {
+    background: var(--medium-bg);
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
-    margin-top: 20px;
-}
-
-/* Lab Container for Two-Column Layout */
-.lab-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.lab {
-    width: 45%;
-    background: white;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-}
-
-.lab img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 15px;
-}
-
-.lab-info {
-    flex: 1;
-}
-
-.lab-info h3 {
-    margin-bottom: 10px;
-}
-
-.lab-info ul {
-    padding-left: 20px;
-}
-
-.lab-info ul li {
-    margin-bottom: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .lab {
-        width: 90%;
-        flex-direction: column;
-        text-align: center;
+    transition: all 0.4s;
+    border: 1px solid var(--secondary-green);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+    border-color: var(--primary-green);
+  }
+  
+  .team-member::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      transparent,
+      transparent,
+      transparent,
+      rgba(0, 255, 0, 0.1)
+    );
+    transform: rotate(30deg);
+  }
+  
+  .team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-green);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--glow);
+    transition: all 0.4s;
+  }
+  
+  .team-member:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  }
+  
+  .team-member h3 {
+    color: var(--neon-green);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .team-member p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ===== News Items ===== */
+  .news-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--secondary-green);
+    position: relative;
+  }
+  
+  .news-item:last-child {
+    border-bottom: none;
+  }
+  
+  .news-item h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  .news-item p {
+    margin-bottom: 1rem;
+  }
+  
+  .news-item em {
+    color: var(--neon-green);
+    font-style: normal;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    background: var(--medium-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--primary-green);
+    position: relative;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(45deg, 
+        transparent, 
+        rgba(0, 80, 0, 0.1), 
+        transparent);
+  }
+  
+  .social-links {
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-links a {
+    color: var(--primary-green);
+    margin: 0 15px;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+  
+  .social-links a:hover {
+    color: var(--neon-green);
+    transform: translateY(-5px);
+    text-shadow: var(--glow);
+  }
+  
+  footer p {
+    margin-bottom: 0.8rem;
+  }
+  
+  footer a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  footer a:hover {
+    color: var(--neon-green);
+    text-shadow: var(--glow);
+  }
+  
+  /* ===== Animations ===== */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 255, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 992px) {
+    .container {
+      width: 90%;
     }
-
-    .lab img {
-        margin-bottom: 15px;
-        width: 100%;
-        max-width: 300px;
+    
+    header h1 {
+      font-size: 2.5rem;
     }
-}
+  }
+  
+  @media (max-width: 768px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    header h1 {
+      font-size: 2rem;
+    }
+    
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      width: 95%;
+    }
+    
+    .research-section {
+      padding: 1.5rem;
+    }
+    
+    header {
+      padding: 2rem 0;
+    }
+  }
